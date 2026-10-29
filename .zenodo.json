@@ -1,0 +1,26 @@
+{
+  "title": "OXTR-GPCR-kinetics: data and code for a meta-analysis of oxytocin receptor and GPCR signaling and trafficking rate constants",
+  "description": "<p>Curated dataset, Bayesian hierarchical model (BHM) and random-effects model (REM) analysis code, and results for \"Kinetic timescales and measurement gaps across oxytocin receptor and GPCR signaling and trafficking\" (Tukei et al.). The code is released under the MIT License and the data and results under CC BY 4.0; the curated values come from the published studies listed in the Supplementary References of the article.</p>",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "oxytocin receptor",
+    "G protein-coupled receptor",
+    "receptor trafficking",
+    "kinetics",
+    "meta-analysis",
+    "Bayesian hierarchical model",
+    "random-effects model"
+  ],
+  "creators": [
+    {"name": "Tukei, Keith Lionel", "affiliation": "Department of Bioengineering, University of Washington"},
+    {"name": "Dubey, Preeti", "affiliation": "Department of Bioengineering, University of Washington"},
+    {"name": "Fang, Yingye", "affiliation": "Department of Bioengineering, University of Washington"},
+    {"name": "Lee, Yunjeong", "affiliation": "Department of Bioengineering, University of Washington"},
+    {"name": "Reinl, Erin L.", "affiliation": "Center for Reproductive Health Sciences, Department of Obstetrics and Gynecology, WashU Medicine"},
+    {"name": "Frolova, Antonina I.", "affiliation": "Center for Reproductive Health Sciences, Department of Obstetrics and Gynecology, WashU Medicine"},
+    {"name": "England, Sarah K.", "affiliation": "Center for Reproductive Health Sciences, Department of Obstetrics and Gynecology, WashU Medicine"},
+    {"name": "Imoukhuede, Princess I.", "affiliation": "Department of Bioengineering, University of Washington"}
+  ]
+}
