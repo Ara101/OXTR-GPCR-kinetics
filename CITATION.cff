@@ -6,6 +6,14 @@ license:
   - MIT
   - CC-BY-4.0
 repository-code: "https://github.com/Ara101/OXTR-GPCR-kinetics"
+doi: "10.5281/zenodo.23782402"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23782402"
+    description: "All versions (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.23782403"
+    description: "Version 1.0.0, the release analysed in the manuscript"
 authors:
   - given-names: Keith Lionel
     family-names: Tukei

@@ -1,5 +1,7 @@
 # OXTR-GPCR-kinetics
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23782402.svg)](https://doi.org/10.5281/zenodo.23782402)
+
 Data and code for **"Kinetic timescales and measurement gaps across oxytocin receptor and GPCR signaling and trafficking"**
 
 Keith Lionel Tukei<sup>1</sup>, Preeti Dubey<sup>1</sup>, Yingye Fang<sup>1</sup>, Yunjeong Lee<sup>1</sup>, Erin L. Reinl<sup>2</sup>, Antonina I. Frolova<sup>2</sup>, Sarah K. England<sup>2</sup>, Princess I. Imoukhuede<sup>1</sup>
@@ -107,7 +109,11 @@ The R scripts set their working directory to `code/R`, so they can be run from a
 
 ## Citation
 
-Please cite the associated manuscript (details will be added on publication); `CITATION.cff` holds the current citation metadata.
+Please cite the associated manuscript (details will be added on publication). To cite the data and code, use the Zenodo archive:
+
+> Tukei KL, Dubey P, Fang Y, Lee Y, Reinl EL, Frolova AI, England SK, Imoukhuede PI. 2026. OXTR-GPCR-kinetics: data and code for a meta-analysis of oxytocin receptor and GPCR signaling and trafficking rate constants (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23782403
+
+Version 1.0.0 is the release analysed in the manuscript; https://doi.org/10.5281/zenodo.23782402 always resolves to the latest version. `CITATION.cff` holds the citation metadata.
 
 ## License
 
