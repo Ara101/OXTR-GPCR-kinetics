@@ -1,0 +1,36 @@
+"parameter","Reference","Receptor","class","value","SD"
+"kact","Wright et al., 2021","AT1R","Class A",3.355,0.355
+"kact","Masuho et al., 2015","M3R","Class A",354,18
+"kact","Masuho et al., 2015","M3R","Class A",342,12
+"kact","Masuho et al., 2015","M3R","Class A",212,6
+"kact","Masuho et al., 2015","M3R","Class A",120,6
+"kact","Masuho et al., 2015","M3R","Class A",22.8,0.6
+"kact","Masuho et al., 2015","M3R","Class A",10.8,0.6
+"kact","Masuho et al., 2015","M3R","Class A",15.6,0.6
+"kact","Masuho et al., 2015","M3R","Class A",22.2,0.6
+"kact","Masuho et al., 2015","M3R","Class A",15,0.6
+"kact","Masuho et al., 2015","M3R","Class A",1.44,0.06
+"kact","Brandt and Ross, 1986","β2AR","Class A",1.68,0.09
+"kact","Jensen et al., 2009","M1R","Class A",40,13
+"kact","Fowler et al., 2007","GABABR","Class C",25.59,2.28
+"kinact","Jensen et al., 2009","M1R","Class A",15.5,2.5
+"kinact","Fowler et al., 2007","GABABR","Class C",11.51,1.23
+"kinact","Mutneja et al., 2005","GABABR","Class C",15.38,0.892
+"krec","Conti, et al., 2009","OXTR","Class A",0.0575,0.0115
+"krec","Gulappa et al., 2011","LHR","Class A",0.0033,3e-04
+"krec","Bulseco, Thesis 1996","M2R","Class A",0.013,0.002
+"krec","Wiley, et al., 1991","TR","non-GPCR",0.13,0.02
+"kexpt","Patterson et al., 2008","VSVG-GFP","non-GPCR",0.0545,0.0155
+"kexpt","Bulseco, Thesis 1996","M2R","Class A",0.035265,0.033735
+"kexpt","Hirschberg, K et al. 1998","VSVG-GFP","non-GPCR",0.0303,0.0026
+"krgt","Starr, et al., 2007","VSVG-GFP","non-GPCR",0.0375,0.0175
+"krgt","Ure, et al., 1997","INGF","non-GPCR",0.00233,7e-05
+"krgt","Hirschberg, K et al. 1998","VSVG-GFP","non-GPCR",0.0284,0.002
+"kdeg","Lee, et al., 2021","α1AR","Class A",0.008708,0.001488
+"kdeg","Lee, et al., 2021","α2AR","Class A",0.0057,0.000611
+"kdeg","Lee, et al., 2021","βXAR","Class A",0.005965,0.0009856
+"kdeg","Lee, et al., 2021","5-HTX","Class A",0.004507,0.000656
+"kdeg","Lee, et al., 2021","SSTR","Class A",0.007453,0.001447
+"kdeg","Lee, et al., 2021","CXCR","Class A",0.006515,0.001183
+"kdeg","S. L. Shyng & M. M. Salpeter 1989","AChR","non-GPCR",0.00042675,7.635e-05
+"kdeg","Hirschberg, K et al. 1998","VSVG-GFP","non-GPCR",0.00255,0.00034

@@ -1,0 +1,24 @@
+Data and results licence
+
+Copyright (c) 2026 Keith Lionel Tukei, Preeti Dubey, Yingye Fang, Yunjeong Lee,
+Erin L. Reinl, Antonina I. Frolova, Sarah K. England, Princess I. Imoukhuede
+
+The curated dataset and analysis outputs in this repository -- everything in
+data/ and results/ (curated kinetic-parameter workbooks, digitised values,
+pooled estimates, posterior traces, tables and figures) -- are licensed under
+the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, provide a link to the
+licence, and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary:           https://creativecommons.org/licenses/by/4.0/
+
+Attribution: please cite the associated manuscript (see CITATION.cff). The
+curated values were extracted from the published studies listed in the
+Supplementary References (SR1-SR57); please also credit those sources when
+reusing individual values.
+
+The source code in code/ is licensed separately under the MIT License (see
+LICENSE).

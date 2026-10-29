@@ -1,0 +1,43 @@
+receptor,class,note
+OXTR,Class A,oxytocin receptor
+M1R,Class A,muscarinic acetylcholine receptor M1
+M2R,Class A,muscarinic acetylcholine receptor M2
+M3R,Class A,muscarinic acetylcholine receptor M3
+D1R,Class A,dopamine D1 receptor
+D2R,Class A,dopamine D2 receptor
+β1AR,Class A,beta-1 adrenergic receptor
+β2AR,Class A,beta-2 adrenergic receptor
+βXAR,Class A,generic beta-adrenergic receptor (all beta-adrenergic subtypes are Class A)
+α1AR,Class A,alpha-1 adrenergic receptor
+α2AR,Class A,alpha-2 adrenergic receptor
+AT1R,Class A,angiotensin II type 1 receptor
+V1R,Class A,vasopressin V1 receptor
+V1AR,Class A,vasopressin V1a receptor
+V2R,Class A,vasopressin V2 receptor
+A2AR,Class A,adenosine A2A receptor
+5-HT1A,Class A,serotonin 1A receptor
+5-HT2A,Class A,serotonin 2A receptor
+5-HT4,Class A,serotonin 4 receptor
+5-HTX,Class A,generic serotonin receptor (Lee et al. 2021); confirmed a GPCR (not 5-HT3) by K. L. Tukei 2026-10-08
+PGD2R,Class A,prostaglandin D2 receptor (DP)
+H2R,Class A,histamine H2 receptor
+SSTR,Class A,somatostatin receptor
+CXCR,Class A,generic CXC chemokine receptor
+CXCR4,Class A,CXC chemokine receptor 4
+CXCR5,Class A,CXC chemokine receptor 5
+CXCR7,Class A,ACKR3; atypical chemokine receptor that does not couple G protein
+PAR1,Class A,protease-activated receptor 1
+LHR,Class A,luteinizing hormone receptor
+P2Y1R,Class A,purinergic P2Y1 receptor
+P2Y12R,Class A,purinergic P2Y12 receptor
+GCGR,Class B,glucagon receptor
+GLP1,Class B,glucagon-like peptide-1 receptor
+PAC1R,Class B,PACAP type I receptor
+PTH,Class B,parathyroid hormone receptor
+GABABR,Class C,GABA-B receptor
+mGluR2/mGluR7,Class C,metabotropic glutamate receptors 2/7
+AChR,non-GPCR,nicotinic acetylcholine receptor (ligand-gated ion channel)
+VSVG-GFP,non-GPCR,vesicular stomatitis virus G protein (viral cargo)
+TR,non-GPCR,transferrin receptor
+EGFP-CDMPR,non-GPCR,cation-dependent mannose-6-phosphate receptor
+INGF,non-GPCR,nerve growth factor (radio-iodinated)

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# R
+.RData
+.Rhistory
+.Rproj.user/
+Rplots.pdf
+
+# Office lock files
+~$*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

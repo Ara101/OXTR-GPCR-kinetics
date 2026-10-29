@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use these pooled kinetic estimates or this code, please cite the associated manuscript."
+title: "OXTR-GPCR-kinetics: data and code for a meta-analysis of oxytocin receptor and GPCR signaling and trafficking rate constants"
+type: software
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/Ara101/OXTR-GPCR-kinetics"
+authors:
+  - given-names: Keith Lionel
+    family-names: Tukei
+    affiliation: "Department of Bioengineering, University of Washington"
+  - given-names: Preeti
+    family-names: Dubey
+    affiliation: "Department of Bioengineering, University of Washington"
+  - given-names: Yingye
+    family-names: Fang
+    affiliation: "Department of Bioengineering, University of Washington"
+  - given-names: Yunjeong
+    family-names: Lee
+    affiliation: "Department of Bioengineering, University of Washington"
+  - given-names: Erin L.
+    family-names: Reinl
+    affiliation: "Center for Reproductive Health Sciences, Department of Obstetrics and Gynecology, WashU Medicine"
+  - given-names: Antonina I.
+    family-names: Frolova
+    affiliation: "Center for Reproductive Health Sciences, Department of Obstetrics and Gynecology, WashU Medicine"
+  - given-names: Sarah K.
+    family-names: England
+    affiliation: "Center for Reproductive Health Sciences, Department of Obstetrics and Gynecology, WashU Medicine"
+  - given-names: Princess I.
+    family-names: Imoukhuede
+    affiliation: "Department of Bioengineering, University of Washington"
+preferred-citation:
+  type: article
+  title: "Kinetic timescales and measurement gaps across oxytocin receptor and GPCR signaling and trafficking"
+  authors:
+    - given-names: Keith Lionel
+      family-names: Tukei
+    - given-names: Preeti
+      family-names: Dubey
+    - given-names: Yingye
+      family-names: Fang
+    - given-names: Yunjeong
+      family-names: Lee
+    - given-names: Erin L.
+      family-names: Reinl
+    - given-names: Antonina I.
+      family-names: Frolova
+    - given-names: Sarah K.
+      family-names: England
+    - given-names: Princess I.
+      family-names: Imoukhuede
