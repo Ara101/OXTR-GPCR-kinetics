@@ -45,7 +45,7 @@ K<sub>d</sub>, k<sub>on,G</sub> and k<sub>off,G</sub> are BHM-only: too few valu
 
 | Manuscript item | Script | Output |
 |---|---|---|
-| Figure 1 (pathway schematic with BHM intervals) | intervals from `results/bhm_refit_2026-09-24/tables/bhm_refit_summary.csv` | `results/figures/Figure1_signaling_schematic_with_values.png` |
+| Figure 1 (pathway schematic with BHM intervals; created in BioRender, see License) | intervals from `results/bhm_refit_2026-09-24/tables/bhm_refit_summary.csv` | `results/figures/Figure1_signaling_schematic_with_values.png` |
 | Figure 2 (curation workflow) | — | `results/figures/Figure2_flow_chart.png` |
 | Figure 3 (receptors and ligands) | `code/python/figure3_pie_charts.py` | `results/comparative_analysis/` |
 | Figures 4–5 (pooled rate constants) | `code/python/figure4_figure5_rate_constants.py` | `results/figures/python/` |
@@ -119,3 +119,4 @@ Version 1.0.0 is the release analysed in the manuscript; https://doi.org/10.5281
 
 - **Code** (`code/`): MIT License, see `LICENSE`.
 - **Data and results** (`data/`, `results/`): Creative Commons Attribution 4.0 International (CC BY 4.0), see `LICENSE-DATA`. The curated values come from the published studies listed in the Supplementary References (SR1–SR57); please credit those sources when reusing individual values.
+- **Figure 1** (`results/figures/Figure1_signaling_schematic_with_values.png`): Created in BioRender. Tukei, K. L. (2026) https://BioRender.com/s9ppa7p. The BioRender artwork is used under a BioRender publication licence and is not covered by CC BY 4.0.
