@@ -13,7 +13,8 @@ pooled parameters rest on very few studies (k as low as 3):
      no power to see it, or is the divergence for k_inact real (not a
      small-n artifact)?
   D. Does REM's narrow k_inact estimate come from three studies that
-     happen to cluster, or is that just ordinary 3-study sampling noise?
+     happen to cluster, or is that just ordinary sampling noise for that
+     number of studies?
 
 Data source
 -----------
@@ -162,8 +163,8 @@ SPECS = [
 # for the verification printout below -- not as an input to any power/precision
 # number).
 TABLE_S4 = {
-    "k_act": dict(tau2=3.22, Q=22400, I2=100, n_se=14, n_full=39),
-    "k_inact": dict(tau2=0.0191, Q=5.87, I2=66, n_se=3, n_full=17),
+    "k_act": dict(tau2=3.11, Q=22900, I2=100, n_se=16, n_full=41),
+    "k_inact": dict(tau2=1.02, Q=1230, I2=100, n_se=5, n_full=19),
     "k_P": dict(tau2=0.769, Q=310, I2=99, n_se=3, n_full=8),
     "k_dp": dict(tau2=0.157, Q=13.7, I2=85, n_se=3, n_full=5),
     "k_ba": dict(tau2=0.579, Q=1500, I2=99, n_se=13, n_full=16),
@@ -414,17 +415,18 @@ kinact_full_vals = (
 n_full_kinact = len(kinact_full_vals)
 log_kinact_full = np.log(kinact_full_vals)
 
-# REM point estimate from the 3 SE-reporting studies (inverse-variance
+# REM point estimate from the n_rem SE-reporting studies (inverse-variance
 # pooled mean, natural-log scale) -- this is PARAMS["k_inact"]["mu"].
 rem_kinact_log = PARAMS["k_inact"]["mu"]
 rem_kinact_geomean = float(np.exp(rem_kinact_log))
+n_rem = PARAMS["k_inact"]["k"]
 
-# Exact enumeration of all C(n_full_kinact, 3) three-study subsets
-# (n_full_kinact=17 -> C(17,3)=680, small enough to enumerate exactly --
+# Exact enumeration of all C(n_full_kinact, n_rem) subsets of the REM's size
+# (n_full_kinact=19, n_rem=5 -> C(19,5)=11628, small enough to enumerate exactly --
 # strictly better than Monte Carlo bootstrap for a finite population of
 # this size, so we do that instead of resampling with replacement).
 subset_log_means = np.array([
-    np.mean(log_kinact_full[list(idx)]) for idx in combinations(range(n_full_kinact), 3)
+    np.mean(log_kinact_full[list(idx)]) for idx in combinations(range(n_full_kinact), n_rem)
 ])
 subset_geomeans = np.exp(subset_log_means)
 n_subsets = len(subset_geomeans)
@@ -432,12 +434,12 @@ n_subsets = len(subset_geomeans)
 percentile_rank = float(np.mean(subset_log_means <= rem_kinact_log) * 100)
 two_sided_tail = float(2 * min(percentile_rank, 100 - percentile_rank) / 100)
 
-print("\n--- Analysis D: k_inact 3-study subsample check ---")
+print(f"\n--- Analysis D: k_inact {n_rem}-study subsample check ---")
 print(f"full BHM-eligible k_inact dataset n = {n_full_kinact} "
       f"(Table S4 states n(full) = {TABLE_S4['k_inact']['n_full']})")
-print(f"exact enumeration of all C({n_full_kinact},3) = {n_subsets} 3-study subsets")
-print(f"REM (3 SE-reporting studies) geometric mean = {rem_kinact_geomean:.3f} min^-1")
-print(f"REM point estimate percentile rank among all 3-study subset means: "
+print(f"exact enumeration of all C({n_full_kinact},{n_rem}) = {n_subsets} {n_rem}-study subsets")
+print(f"REM ({n_rem} SE-reporting studies) geometric mean = {rem_kinact_geomean:.3f} min^-1")
+print(f"REM point estimate percentile rank among all {n_rem}-study subset means: "
       f"{percentile_rank:.1f}th percentile")
 print(f"two-sided tail probability = {two_sided_tail:.3f}")
 
@@ -508,7 +510,7 @@ print(f"\nSaved {TABLE_OUT}")
 # Figure S17: Q-test power curves
 # ---------------------------------------------------------------------------
 
-HIGHLIGHT = ["k_inact", "k_expt", "k_act", "k_rec"]  # 2 low-het, 2 high-het for contrast
+HIGHLIGHT = ["k_inact", "k_expt", "k_act", "k_rec"]  # the two discussed in the text, plus two high-het for contrast
 COLORS = {"k_inact": "#1b7837", "k_expt": "#5aae61", "k_act": "#762a83", "k_rec": "#9970ab"}
 
 fig, ax = plt.subplots(figsize=(7.5, 5.5))

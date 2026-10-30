@@ -1,11 +1,12 @@
 """
 Kinetic K_d check (Results: G-protein association, dissociation and binding affinity).
 
-Four of the five curated GPCR:G-protein K_d values are k_off/k_on ratios for the same receptor-G protein
-pair (Hein et al. 2006, SR17; Ilyaskina et al. 2018, SR20); the fifth (Namkung et al. 2018, SR37) is
-not. This script compares the pooled K_d with (i) those matched-pair ratios and (ii) the ratio of the
+Two of the three curated GPCR:G-protein K_d values are k_off/k_on ratios for the same receptor-G protein
+pair (Ilyaskina et al. 2018, SR20); the third (Namkung et al. 2018, SR37) is not. Hein et al. 2006 (SR17)
+contributes k_off,G only: its tau_on was measured at saturating agonist, so no k_on,G or K_d is curated
+from it. This script compares the pooled K_d with (i) those matched-pair ratios and (ii) the ratio of the
 pooled k_off,G and k_on,G from the published BHM refits. The two pooled rate constants come from
-independent fits over different receptor sets (k_off,G: 14 values; k_on,G: 4), so their posterior
+independent fits over different receptor sets (k_off,G: 14 values; k_on,G: 2), so their posterior
 draws are paired at random and that interval is approximate.
 
     python code/python/kinetic_kd_check.py   ->  results/tables/kinetic_Kd_check.csv
@@ -30,11 +31,12 @@ def draws(name):
 def main():
     rng = np.random.default_rng(8927)
     kon, koff, kd = draws("konG"), draws("koffG"), draws("Kd")
+    kd_obs = az.from_netcdf(TRACES / "Kd.nc").observed_data["y"]
     kinetic = koff / rng.permutation(kon) * 1e9  # min^-1 / (M^-1 min^-1) = M -> nM
     k_lo, k_hi = az.hdi(kinetic, hdi_prob=0.95)
     d_lo, d_hi = az.hdi(kd, hdi_prob=0.95)
     rows = [
-        dict(quantity="K_d, pooled (BHM, n = 5)", median_nM=np.median(kd), hdi_lo_nM=d_lo, hdi_hi_nM=d_hi),
+        dict(quantity=f"K_d, pooled (BHM, n = {len(kd_obs)})", median_nM=np.median(kd), hdi_lo_nM=d_lo, hdi_hi_nM=d_hi),
         dict(quantity="k_off,G / k_on,G, ratio of posterior medians", median_nM=np.median(koff) / np.median(kon) * 1e9,
              hdi_lo_nM=np.nan, hdi_hi_nM=np.nan),
         dict(quantity="k_off,G / k_on,G, ratio of randomly paired draws", median_nM=np.median(kinetic),

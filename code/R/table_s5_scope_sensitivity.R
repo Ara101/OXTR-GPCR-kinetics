@@ -94,7 +94,7 @@ for (name in names(params)) {
 out <- do.call(rbind, rows)
 
 # Sanity check: the full fits must reproduce Table S1 (REM column)
-table_s1 <- c(kact = 2.48e1, kinact = 1.40e1, krec = 2.37e-2, kexpt = 3.75e-2, krgt = 1.31e-2, kdeg = 4.04e-3)
+table_s1 <- c(kact = 3.04e1, kinact = 7.02e0, krec = 2.37e-2, kexpt = 3.75e-2, krgt = 1.31e-2, kdeg = 4.04e-3)
 full <- out[out$subset == "full", ]
 stopifnot(all(abs(signif(full$mean, 3) - table_s1[full$parameter]) / table_s1[full$parameter] < 1e-6))
 

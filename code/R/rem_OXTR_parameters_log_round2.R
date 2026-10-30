@@ -504,7 +504,7 @@ png(file=sprintf("%s/forest_Gprotein_inactivation_geometric_mean.png", results_p
 forest_ylee(data=kinact, rm=rm_kinact_orig, atransf=exp, slab=kinact$Receptor,
             header=c("Receptor type", ""),
             unit = stri_unescape_unicode(gsub("<U\\+(....)>", "\\\\u\\1", "min<U+207B><U+00B9>")),
-            xlab=TeX("G protein inactivation Rate constant, $k_{inact}$ ($min^{-1}$)"), xlim = c(-3, 9), alim = c(1.5, 4), cex=2)
+            xlab=TeX("G protein inactivation Rate constant, $k_{inact}$ ($min^{-1}$)"), xlim = c(-4.5, 8.5), alim = c(0, 3.5), cex=2)
 dev.off()
 
 # krec

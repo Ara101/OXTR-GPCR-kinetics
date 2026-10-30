@@ -1,8 +1,6 @@
 quantity,median_nM,hdi_lo_nM,hdi_hi_nM
-"K_d, pooled (BHM, n = 5)",1903.234166978412,252.57316873570176,5585.488072227367
-"k_off,G / k_on,G, ratio of posterior medians",742.2670713239065,,
-"k_off,G / k_on,G, ratio of randomly paired draws",746.4923913937643,37.81911687213961,2621.2735775838505
-"matched pair: Hein et al. 2006, A2AR-Gs (curated K_d 3380 nM)",3375.0,,
-"matched pair: Hein et al. 2006, β1AR-Gs (curated K_d 6930 nM)",6932.038834951456,,
+"K_d, pooled (BHM, n = 3)",862.6998637843934,18.629939955249636,3090.6662619609365
+"k_off,G / k_on,G, ratio of posterior medians",429.4177556140052,,
+"k_off,G / k_on,G, ratio of randomly paired draws",428.7988830235893,8.024406952520591,1961.2663194093968
 "matched pair: Ilyaskina, et al., 2018, M3R-Go (curated K_d 900 nM)",894.187779433681,,
 "matched pair: Ilyaskina, et al., 2018, M3R-Gq (curated K_d 400 nM)",401.1589034989971,,

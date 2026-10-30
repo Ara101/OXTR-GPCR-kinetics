@@ -13,7 +13,7 @@ identifiers:
     description: "All versions (concept DOI)"
   - type: doi
     value: "10.5281/zenodo.23782403"
-    description: "Version 1.0.0, the release analysed in the manuscript"
+    description: "Version 1.0.0 (superseded by v1.1.0, the release analysed in the manuscript)"
 authors:
   - given-names: Keith Lionel
     family-names: Tukei

@@ -24,11 +24,11 @@ Fourteen parameters were pooled: thirteen rate constants spanning G-protein bind
 
 | Process | Symbol | BHM | REM | Units |
 |---|---|---|---|---|
-| GPCR:G-protein binding affinity | K<sub>d</sub> | 1.90×10³ | — | nM |
-| G-protein association | k<sub>on,G</sub> | 1.82×10⁶ | — | M⁻¹min⁻¹ |
+| GPCR:G-protein binding affinity | K<sub>d</sub> | 8.63×10² | — | nM |
+| G-protein association | k<sub>on,G</sub> | 3.15×10⁶ | — | M⁻¹min⁻¹ |
 | G-protein dissociation | k<sub>off,G</sub> | 1.35×10⁰ | — | min⁻¹ |
-| G-protein activation | k<sub>act</sub> | 3.27×10⁰ | 2.48×10¹ | min⁻¹ |
-| G-protein inactivation | k<sub>inact</sub> | 1.81×10⁰ | 1.40×10¹ | min⁻¹ |
+| G-protein activation | k<sub>act</sub> | 4.59×10⁰ | 3.04×10¹ | min⁻¹ |
+| G-protein inactivation | k<sub>inact</sub> | 2.04×10⁰ | 7.02×10⁰ | min⁻¹ |
 | GRK-mediated phosphorylation | k<sub>P</sub> | 6.33×10⁻¹ | 4.14×10⁻¹ | min⁻¹ |
 | Dephosphorylation | k<sub>dp</sub> | 5.75×10⁻² | 6.31×10⁻² | min⁻¹ |
 | β-arrestin binding | k<sub>ba</sub> | 6.75×10⁻¹ | 8.94×10⁻¹ | min⁻¹ |
@@ -39,14 +39,14 @@ Fourteen parameters were pooled: thirteen rate constants spanning G-protein bind
 | Retrograde transport to Golgi | k<sub>rgt</sub> | 4.50×10⁻² | 1.31×10⁻² | min⁻¹ |
 | Degradation | k<sub>deg</sub> | 1.88×10⁻³ | 4.04×10⁻³ | min⁻¹ |
 
-K<sub>d</sub>, k<sub>on,G</sub> and k<sub>off,G</sub> are BHM-only: too few values report a standard error to support a random-effects fit. k<sub>P</sub> and k<sub>ba</sub> are apparent first-order rate constants derived as ln(2)/t<sub>½</sub> from saturating-agonist assays. Intervals and per-parameter statistics are in the manuscript's Supplementary Tables S1–S7 and in the files listed below.
+K<sub>d</sub>, k<sub>on,G</sub> and k<sub>off,G</sub> are BHM-only: too few values report a standard error to support a random-effects fit; k<sub>on,G</sub> rests on two values from a single study (Ilyaskina et al. 2018). k<sub>P</sub> and k<sub>ba</sub> are apparent first-order rate constants derived as ln(2)/t<sub>½</sub> from saturating-agonist assays. Intervals and per-parameter statistics are in the manuscript's Supplementary Tables S1–S7 and in the files listed below.
 
 ## Where each result comes from
 
 | Manuscript item | Script | Output |
 |---|---|---|
 | Figure 1 (pathway schematic with BHM intervals; created in BioRender, see License) | intervals from `results/bhm_refit_2026-09-24/tables/bhm_refit_summary.csv` | `results/figures/Figure1_signaling_schematic_with_values.png` |
-| Figure 2 (curation workflow) | — | `results/figures/Figure2_flow_chart.png` |
+| Figure 2 (curation workflow; created in BioRender, see License) | — | `results/figures/Figure2_flow_chart.png` |
 | Figure 3 (receptors and ligands) | `code/python/figure3_pie_charts.py` | `results/comparative_analysis/` |
 | Figures 4–5 (pooled rate constants) | `code/python/figure4_figure5_rate_constants.py` | `results/figures/python/` |
 | BHM estimates (Table S1, Figures S1, S2, S5, S6, S10, S12, S14–S16) | `code/python/bhm_refit.py` | `results/bhm_refit_2026-09-24/` |
@@ -91,7 +91,7 @@ python code/python/power_analysis.py             # Table S6, Figure S17
 python code/python/kinetic_kd_check.py
 ```
 
-`environment_bhm.yml` pins the exact conda-forge build used for the reported values (PyMC 5.7.2, pytensor 2.14.2, arviz 0.16.1, numpy 1.25.2, Python 3.11, with the m2w64 g++ toolchain so pytensor compiles on Windows). With the same seed and environment the refit reproduces its tables exactly.
+`environment_bhm.yml` pins the exact conda-forge build used for the reported values (PyMC 5.7.2, pytensor 2.14.2, arviz 0.16.1, numpy 1.25.2, Python 3.11, with the m2w64 g++ toolchain so pytensor compiles on Windows). Rerunning in the same environment reproduces a run exactly. An environment rebuilt from this file on another day reproduced some fits exactly and moved others slightly (medians by under 2%), so the K<sub>d</sub>, k<sub>on,G</sub>, k<sub>act</sub> and k<sub>inact</sub> refits of v1.1.0 were merged into the 2026-09-24 results rather than rerunning every parameter (see the note in `code/python/bhm_refit.py`).
 
 ### REM (R)
 
@@ -111,12 +111,18 @@ The R scripts set their working directory to `code/R`, so they can be run from a
 
 Please cite the associated manuscript (details will be added on publication). To cite the data and code, use the Zenodo archive:
 
-> Tukei KL, Dubey P, Fang Y, Lee Y, Reinl EL, Frolova AI, England SK, Imoukhuede PI. 2026. OXTR-GPCR-kinetics: data and code for a meta-analysis of oxytocin receptor and GPCR signaling and trafficking rate constants (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23782403
+> Tukei KL, Dubey P, Fang Y, Lee Y, Reinl EL, Frolova AI, England SK, Imoukhuede PI. 2026. OXTR-GPCR-kinetics: data and code for a meta-analysis of oxytocin receptor and GPCR signaling and trafficking rate constants (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.23782402
 
-Version 1.0.0 is the release analysed in the manuscript; https://doi.org/10.5281/zenodo.23782402 always resolves to the latest version. `CITATION.cff` holds the citation metadata.
+Version 1.1.0 is the release analysed in the manuscript; https://doi.org/10.5281/zenodo.23782402 always resolves to the latest version, and each version's own DOI is listed on the Zenodo record.
+
+Version history:
+
+- **v1.1.0** (2026-10-30): Hein et al. 2006 (SR17) corrected. Its k<sub>on,G</sub> and K<sub>d</sub> were derived as 1/(τ<sub>on</sub> × agonist concentration), but τ<sub>on</sub> was measured at a saturating agonist dose and no G-protein concentration is reported, so both were removed (its k<sub>off,G</sub> is kept). Its Gs activation and deactivation time constants (Fig. 2 of that paper) were added to k<sub>act</sub> and k<sub>inact</sub>. K<sub>d</sub>, k<sub>on,G</sub>, k<sub>act</sub> and k<sub>inact</sub> were refit; Tables S5–S6, Figures 3–5 and the affected supplementary figures were regenerated.
+- **v1.0.0** (2026-10-29, https://doi.org/10.5281/zenodo.23782403): first release. `CITATION.cff` holds the citation metadata.
 
 ## License
 
 - **Code** (`code/`): MIT License, see `LICENSE`.
 - **Data and results** (`data/`, `results/`): Creative Commons Attribution 4.0 International (CC BY 4.0), see `LICENSE-DATA`. The curated values come from the published studies listed in the Supplementary References (SR1–SR57); please credit those sources when reusing individual values.
 - **Figure 1** (`results/figures/Figure1_signaling_schematic_with_values.png`): Created in BioRender. Tukei, K. L. (2026) https://BioRender.com/s9ppa7p. The BioRender artwork is used under a BioRender publication licence and is not covered by CC BY 4.0.
+- **Figure 2** (`results/figures/Figure2_flow_chart.png`): Created in BioRender. Tukei, K. L. (2026) https://BioRender.com/xal7h5y. Also used under a BioRender publication licence and not covered by CC BY 4.0.

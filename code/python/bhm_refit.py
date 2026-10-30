@@ -42,6 +42,13 @@ Units: k_P and k_ba are labelled as apparent first-order rate constants
 reports the GRK or beta-arrestin concentration needed for a bimolecular (M^-1 min^-1) constant.
 Only the labels changed; no value or fit changed.
 
+2026-10-30: Hein et al. 2006 (SR17) corrected in the data. Its k_on,G and K_d were 1/(tau_on x 1 mM agonist);
+tau_on was measured at saturating agonist and no G-protein concentration is reported, so both were removed (k_off,G
+kept). Its Gs activation/deactivation time constants (Fig. 2) were added to k_act/k_inact. Kd, konG, kact and kinact
+were refit in an environment rebuilt from environment_bhm.yml, and only their traces, figures and table rows were
+kept; every other parameter's are the 2026-09-24 fit (python code/python/bhm_refit.py Kd konG kact kinact reruns
+just the four).
+
 Run with the environment in code/python/environment_bhm.yml:
     python code/python/bhm_refit.py
 """
