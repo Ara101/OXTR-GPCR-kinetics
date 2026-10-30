@@ -111,13 +111,13 @@ The R scripts set their working directory to `code/R`, so they can be run from a
 
 Please cite the associated manuscript (details will be added on publication). To cite the data and code, use the Zenodo archive:
 
-> Tukei KL, Dubey P, Fang Y, Lee Y, Reinl EL, Frolova AI, England SK, Imoukhuede PI. 2026. OXTR-GPCR-kinetics: data and code for a meta-analysis of oxytocin receptor and GPCR signaling and trafficking rate constants (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.23782402
+> Tukei KL, Dubey P, Fang Y, Lee Y, Reinl EL, Frolova AI, England SK, Imoukhuede PI. 2026. OXTR-GPCR-kinetics: data and code for a meta-analysis of oxytocin receptor and GPCR signaling and trafficking rate constants (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.23819300
 
-Version 1.1.0 is the release analysed in the manuscript; https://doi.org/10.5281/zenodo.23782402 always resolves to the latest version, and each version's own DOI is listed on the Zenodo record.
+Version 1.1.0 is the release analysed in the manuscript; https://doi.org/10.5281/zenodo.23782402 always resolves to the latest version.
 
 Version history:
 
-- **v1.1.0** (2026-10-30): Hein et al. 2006 (SR17) corrected. Its k<sub>on,G</sub> and K<sub>d</sub> were derived as 1/(τ<sub>on</sub> × agonist concentration), but τ<sub>on</sub> was measured at a saturating agonist dose and no G-protein concentration is reported, so both were removed (its k<sub>off,G</sub> is kept). Its Gs activation and deactivation time constants (Fig. 2 of that paper) were added to k<sub>act</sub> and k<sub>inact</sub>. K<sub>d</sub>, k<sub>on,G</sub>, k<sub>act</sub> and k<sub>inact</sub> were refit; Tables S5–S6, Figures 3–5 and the affected supplementary figures were regenerated.
+- **v1.1.0** (2026-10-30, https://doi.org/10.5281/zenodo.23819300): Hein et al. 2006 (SR17) corrected. Its k<sub>on,G</sub> and K<sub>d</sub> were derived as 1/(τ<sub>on</sub> × agonist concentration), but τ<sub>on</sub> was measured at a saturating agonist dose and no G-protein concentration is reported, so both were removed (its k<sub>off,G</sub> is kept). Its Gs activation and deactivation time constants (Fig. 2 of that paper) were added to k<sub>act</sub> and k<sub>inact</sub>. K<sub>d</sub>, k<sub>on,G</sub>, k<sub>act</sub> and k<sub>inact</sub> were refit; Tables S5–S6, Figures 3–5 and the affected supplementary figures were regenerated.
 - **v1.0.0** (2026-10-29, https://doi.org/10.5281/zenodo.23782403): first release. `CITATION.cff` holds the citation metadata.
 
 ## License
